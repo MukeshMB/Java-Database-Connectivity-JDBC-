@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="514.0" prefWidth="735.0" styleClass="container" stylesheets="@../Styles/Stylesheet.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.mydbfx.Controllers.InventoryController">
+   <Text layoutX="14.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inventory Data">
+      <font>
+         <Font size="19.0" />
+      </font>
+   </Text>
+   <Button fx:id="backBtn" layoutX="649.0" layoutY="462.0" mnemonicParsing="false" onAction="#backBtnPressed" prefHeight="27.0" prefWidth="72.0" text="Back" />
+   <TableView fx:id="table" layoutX="10.0" layoutY="48.0" prefHeight="370.0" prefWidth="715.0">
+     <columns>
+         <TableColumn fx:id="itemId" prefWidth="75.0" text="ItemID" />
+         <TableColumn fx:id="qty" prefWidth="75.0" text="Qty" />
+         <TableColumn fx:id="price" prefWidth="75.0" text="Price($)" />
+         <TableColumn fx:id="type" prefWidth="104.0" text="Clothing Type" />
+         <TableColumn fx:id="descript" prefWidth="182.0" text="Description" />
+         <TableColumn fx:id="fit" minWidth="7.0" prefWidth="41.0" text="Fit" />
+         <TableColumn fx:id="color" prefWidth="73.0" text="Color" />
+         <TableColumn fx:id="supplierId" prefWidth="89.0" text="SupplierID" />
+     </columns>
+   </TableView>
+   <Separator layoutY="417.0" prefHeight="3.0" prefWidth="735.0" />
+    <ToolBar layoutX="10.0" layoutY="417.0" prefHeight="40.0" prefWidth="715.0">
+        <Button fx:id="addItemBtn" mnemonicParsing="false" onAction="#addItemBtnPressed" prefHeight="27.0" prefWidth="50.0" text="ADD" />
+        <TextField fx:id="itemIdField" prefHeight="25.0" prefWidth="76.0" />
+        <TextField fx:id="qtyField" prefHeight="25.0" prefWidth="52.0" />
+        <TextField fx:id="priceField" prefHeight="25.0" prefWidth="72.0" />
+        <TextField fx:id="typeField" prefHeight="25.0" prefWidth="91.0" />
+        <TextField fx:id="descriptField" prefHeight="25.0" prefWidth="147.0" />
+        <TextField fx:id="fitField" prefHeight="25.0" prefWidth="41.0" />
+        <TextField fx:id="colorField" prefHeight="25.0" prefWidth="55.0" />
+        <TextField fx:id="supplierIdField" prefHeight="25.0" prefWidth="79.0" />
+    </ToolBar>
+   <ButtonBar layoutX="303.0" layoutY="457.0" prefHeight="40.0" prefWidth="285.0">
+     <buttons>
+         <TextField fx:id="updateItemIdField" minWidth="67.0" prefHeight="25.0" prefWidth="41.0" />
+         <TextField fx:id="updateQtyField" minWidth="62.0" prefHeight="25.0" prefWidth="72.0" />
+       <Button fx:id="updateQtyBtn" mnemonicParsing="false" onAction="#updateQtyBtnPressed" text="Update" />
+     </buttons>
+   </ButtonBar>
+   <ButtonBar layoutX="75.0" layoutY="456.0" prefHeight="40.0" prefWidth="195.0">
+      <buttons>
+         <TextField fx:id="deleteItemIdField" prefHeight="25.0" prefWidth="118.0" />
+         <Button fx:id="deleteItemBtn" mnemonicParsing="false" onAction="#deleteItemBtnPressed" text="Delete" />
+      </buttons>
+   </ButtonBar>
+   <Label layoutX="106.0" layoutY="492.0" prefHeight="3.0" prefWidth="62.0" text="ItemID" />
+   <Label layoutX="351.0" layoutY="492.0" prefHeight="3.0" prefWidth="62.0" text="ItemID" />
+   <Label layoutX="438.0" layoutY="492.0" prefHeight="3.0" prefWidth="62.0" text="Qty" />
+</AnchorPane>
